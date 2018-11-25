@@ -1,0 +1,20 @@
+is_language('English').
+same_word_different_tense('go', 'gone').
+relative('nation', 'national').
+adj_relative('cool', 'cold').
+translate('cool','English','chaud','French').
+pronounce('chaud',X).
+is_verb(X).
+translate('froid','French',X,'English').
+synonym(X, Y).
+base('flow',X).
+common_ancestor('flow','rhyme',X).
+antonym('hot',X).
+indirect_originate(X, 'flow').
+direct_originate(X,'rhyme'), in_language(X, Y).
+lowest_common_ancestor('flow','rhyme',X).
+indirect_originate('*sreu-',X).
+relative(X, 'nationality'), type(X, Y).
+synonym('chaud',X).
+latin_derive('rhyme',X).
+indirect_derive('flow','fluxus').

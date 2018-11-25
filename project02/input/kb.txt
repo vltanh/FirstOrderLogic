@@ -1,0 +1,3 @@
+parent('A', 'B')
+parent('A', 'C')
+sibling(x, y)|~parent(z, x)|~parent(z, y)

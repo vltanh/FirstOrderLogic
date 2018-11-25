@@ -1,0 +1,20 @@
+female('Isla Phillips').
+married('Timothy Laurence', 'Princess Anne').
+parent('Prince William', 'Savannah Phillips').
+child('Autumn Kelly','Captain Mark Phillips').
+niece('Mia Grace Tindall', 'Autumn Kelly').
+grandchild('Zara Phillips','Queen Elizabeth II').
+divorced('Sarah Ferguson','Timothy Laurence').
+mother(X,'Princess Beatrice').
+grandfather(X,'Mia Grace Tindall').
+married(X,'Prince William').
+divorced(X, 'Princess Anne').
+married(X, 'Captain Mark Phillips').
+male(X).
+child(X, 'Queen Elizabeth II').
+granddaughter(X, 'Prince Phillip').
+parent(X, 'Lady Louise Mountbatten-Windsor').
+married(X,Y).
+aunt(X, Y).
+divorced(X, Y).
+sibling(X,Y).

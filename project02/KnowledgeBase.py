@@ -1,6 +1,9 @@
 from Clause import Clause
 from Unit import Unit
 import time
+from ForwardChaining import forward_chain
+from BackwardChaining_old import backward_chain
+from Resolution import resolution
 
 class KnowledgeBase:
     def __init__(self):
@@ -17,16 +20,24 @@ class KnowledgeBase:
                 else:
                     self.rules.append(temp)
 
-    def query(self, dir, algo):
-        with open(dir, 'r') as f:
+    def query(self, inp, out):
+        with open(inp, 'r') as f:
             lines = f.readlines()
+
+        algodict = [forward_chain, backward_chain, resolution]
+        with open(out, 'w') as f:
             for line in lines:
-                query = Clause.generate_from_string(line)
+                algoid = int(line[0])
+                query = Clause.generate_from_string(line[1:])
                 print('Query: ', query)
+                self.export(f, algodict[algoid], query)
                 now = time.time()
-                for x in algo(self, query):
-                    print(x)
                 print('Querying takes {} (s)'.format(time.time() - now))
+
+    def export(self, f, algo, query):
+        f.write('Query: {} by {}\n'.format(query, algo.__name__))
+        for x in algo(self, query):
+            f.write('{}\n'.format(x))
 
     def show(self, show_facts = True, show_rules = True):
         if show_facts:

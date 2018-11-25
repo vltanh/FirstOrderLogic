@@ -1,11 +1,17 @@
 from Unify import unify
+from Substitution import Substitution
 
 def forward_chain(KB, query):
     clone_KB = KB.clone()
     query = query.get_unit(0)
+    subs = set()
     for fact in clone_KB.facts:
         for x in check_done(fact, query):
-            if not x == "Fail": yield x
+            if not x == "Fail": 
+                x = Substitution(x)
+                if x not in subs:
+                    yield x
+                    subs.add(x)
         fact = fact.get_unit(0)
         gain_new_knowledge(clone_KB, fact)
     # clone_KB.show(show_facts = True, show_rules = True)

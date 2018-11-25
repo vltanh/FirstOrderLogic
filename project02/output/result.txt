@@ -1,0 +1,21 @@
+Query: sibling(x,y) by forward_chain
+{'x': "'Prince Charles'", 'y': "'Prince Charles'"}
+{'x': "'Prince Charles'", 'y': "'Princess Anne'"}
+{'x': "'Princess Anne'", 'y': "'Prince Charles'"}
+{'x': "'Princess Anne'", 'y': "'Princess Anne'"}
+{'x': "'Peter Phillips'", 'y': "'Peter Phillips'"}
+{'x': "'Mia Grace Tindall'", 'y': "'Mia Grace Tindall'"}
+Query: sibling(x,y) by backward_chain
+{'x': "'Prince Charles'", 'y': "'Prince Charles'"}
+{'x': "'Prince Charles'", 'y': "'Princess Anne'"}
+{'x': "'Princess Anne'", 'y': "'Prince Charles'"}
+{'x': "'Princess Anne'", 'y': "'Princess Anne'"}
+{'x': "'Peter Phillips'", 'y': "'Peter Phillips'"}
+{'x': "'Mia Grace Tindall'", 'y': "'Mia Grace Tindall'"}
+Query: sibling(x,y) by resolution
+{'x': "'Prince Charles'", 'y': "'Prince Charles'"}
+{'x': "'Princess Anne'", 'y': "'Prince Charles'"}
+{'x': "'Prince Charles'", 'y': "'Princess Anne'"}
+{'x': "'Princess Anne'", 'y': "'Princess Anne'"}
+{'x': "'Peter Phillips'", 'y': "'Peter Phillips'"}
+{'x': "'Mia Grace Tindall'", 'y': "'Mia Grace Tindall'"}

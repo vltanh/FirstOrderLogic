@@ -1,1 +1,3 @@
-sibling(x,y)
+0 sibling(x,y)
+1 sibling(x,y)
+2 sibling(x,y)
